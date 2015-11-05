@@ -5,6 +5,7 @@
 int main(void) {
 
   pid_t pid;
+  pid_t sid;
 
   pid = fork();
   if(pid < 0) {
@@ -14,6 +15,17 @@ int main(void) {
     printf("Started daemon.");
     exit(0);
   }
+
+  umask(0);
+
+  /* TODO open logs */
+
+  sid = setsid();
+  if (sid < 0) {
+    exit(-1);
+  }
+
+  /* TODO close STDIN/OUT file descriptors here */
   
   return 0;
 }
