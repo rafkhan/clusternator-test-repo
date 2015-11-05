@@ -8,5 +8,7 @@ dependencies:
 
 deployment:
   hub:
-      commands:
-        - echo DEPLOYING
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_UESR -p $DOCKER_PASSWORD
+      - docker build -t rafkhan/hello-world .
+      - docker push rafkhan/hello-world
