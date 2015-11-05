@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - npm install -g clusternator
+
+deployment:
+  hub:
+      commands:
+        - echo DEPLOYING
