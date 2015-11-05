@@ -1,0 +1,26 @@
+{
+  "name": "YOUR-APP-NAME",
+  "tasks": [
+    {
+      "containerDefinitions": [
+        {
+          "volumesFrom": [],
+          "portMappings": [],
+          "command": ["/bin/sh", "-c"
+          "while true; do echo hello world; sleep 1; done"],
+          "environment": [],
+          "essential": true,
+          "entryPoint": [],
+          "links": [],
+          "mountPoints": [],
+          "memory": 256,
+          "name": "CONTAINER",
+          "cpu": 256,
+          "image": "ubuntu:14.04"
+        }
+      ],
+      "volumes": [],
+      "family": "YOUR-TASK-NAME"
+    }
+  ]
+}
