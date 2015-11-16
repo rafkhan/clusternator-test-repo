@@ -11,3 +11,4 @@ test:
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD
     - docker build -t rafkhan/hello-world .
     - docker push rafkhan/hello-world
+    - "clusternator circleci:push -h 54.174.177.145 -a appdef.json -t $(clusternator circleci:tag)"

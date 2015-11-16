@@ -6,8 +6,7 @@
         {
           "volumesFrom": [],
           "portMappings": [],
-          "command": ["/bin/sh", "-c",
-          "while true; do echo hello world; sleep 1; done"],
+          "command": [],
           "environment": [],
           "essential": true,
           "entryPoint": [],
@@ -16,7 +15,7 @@
           "memory": 256,
           "name": "CONTAINER",
           "cpu": 256,
-          "image": "ubuntu:14.04"
+          "image": "rafkhan/hello-world"
         }
       ],
       "volumes": [],
